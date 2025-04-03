@@ -27,7 +27,7 @@
 1. Clone the repository:
 ```bash
 git clone https://github.com/Adarshsingh-ui/GO_BLOG.git
-cd blog-application
+cd GO_BLOG
 ```
 
 2. Install dependencies:
@@ -92,52 +92,7 @@ PATCH /api/v1/blogs/:id/publish
 DELETE /api/v1/blogs/:id
 ```
 
-## Response Format
 
-All responses follow a consistent format:
-
-```json
-{
-    "success": true,
-    "message": "Optional message",
-    "data": {
-        // Blog data here
-    }
-}
-```
-
-## Blog Model
-
-```go
-type Blog struct {
-    ID          string    `json:"id" binding:"required"`
-    Title       string    `json:"title" binding:"required,min=3,max=100"`
-    Content     string    `json:"content" binding:"required,min=10"`
-    Author      string    `json:"author" binding:"required"`
-    Tags        []string  `json:"tags"`
-    CreatedAt   time.Time `json:"created_at"`
-    UpdatedAt   time.Time `json:"updated_at"`
-    ReadTime    int       `json:"read_time"`
-    IsPublished bool      `json:"is_published"`
-}
-```
-
-## Error Handling
-
-The API returns appropriate HTTP status codes:
-- 200: Success
-- 201: Created
-- 400: Bad Request
-- 404: Not Found
-- 500: Internal Server Error
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## License
 
