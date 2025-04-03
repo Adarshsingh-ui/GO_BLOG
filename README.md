@@ -1,104 +1,12 @@
+# Blog Application (Go + Gin)
 
-
+This is a simple in-memory blog application built using the **Go Gin** framework. It provides RESTful APIs for managing blog posts.
 
 ## Features
+- Create, Read, Update, and Delete (CRUD) operations for blogs.
+- Uses Gin framework for efficient routing.
+- In-memory storage for simplicity.
 
-- **CRUD Operations**: Create, Read, Update, and Delete blog posts
-- **Rich Blog Model**: 
-  - Title and content
-  - Author information
-  - Tags for categorization
-  - Read time estimation
-  - Creation and update timestamps
-  - Draft/Published state
-- **API Versioning**: Using `/api/v1` prefix
-- **Input Validation**: Built-in validation for all fields
-- **Error Handling**: Consistent error responses
-- **Logging**: Built-in request logging
-- **UUID-based IDs**: Secure and unique identifiers
-
-## Prerequisites
-
-- Go 1.21 or higher
-- Git
-
-## Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/Adarshsingh-ui/GO_BLOG.git
-cd GO_BLOG
-```
-
-2. Install dependencies:
-```bash
-go mod tidy
-```
-
-3. Run the application:
-```bash
-go run main.go
-```
-
-The server will start on `http://localhost:3060`
-
-## API Endpoints
-
-### Blogs
-
-#### Get All Blogs
-```http
-GET /api/v1/blogs
-```
-
-#### Get Single Blog
-```http
-GET /api/v1/blogs/:id
-```
-
-#### Create Blog
-```http
-POST /api/v1/blogs
-Content-Type: application/json
-
-{
-    "title": "My New Blog",
-    "content": "This is the content of my blog post...",
-    "author": "Your Name",
-    "tags": ["golang", "web", "api"]
-}
-```
-
-#### Update Blog
-```http
-PUT /api/v1/blogs/:id
-Content-Type: application/json
-
-{
-    "title": "Updated Title",
-    "content": "Updated content...",
-    "author": "Your Name",
-    "tags": ["golang", "web", "api", "updated"]
-}
-```
-
-#### Publish Blog
-```http
-PATCH /api/v1/blogs/:id/publish
-```
-
-#### Delete Blog
-```http
-DELETE /api/v1/blogs/:id
-```
-
-
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- [Gin Web Framework](https://gin-gonic.com/)
-- [Go Programming Language](https://golang.org/)
+## API Documentation
+You can find the full API documentation here:  
+📄 **[API Documentation](https://documenter.getpostman.com/view/43713645/2sB2cShPYk)**  
