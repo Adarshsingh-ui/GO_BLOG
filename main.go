@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"myapp/Routes"
+	"myapp/routes"
 )
 
 func main() {
-	r := Routes.SetupRouter()
+	r := routes.SetupRouter()
     fmt.Println("Server is running on port 3060")
     r.Run(":3060")
 }

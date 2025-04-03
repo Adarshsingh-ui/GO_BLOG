@@ -1,7 +1,7 @@
-package Routes
+package routes
 
 import (
-	"myapp/Controllers"
+	"myapp/controllers"
 	"github.com/gin-gonic/gin"
 )
 
@@ -15,12 +15,12 @@ func SetupRouter() *gin.Engine {
 	{
 		blogs := v1.Group("/blogs")
 		{
-			blogs.GET("", Controllers.GetBlogs)
-			blogs.POST("", Controllers.CreateBlog)
-			blogs.GET("/:id", Controllers.GetBlogByID)
-			blogs.PUT("/:id", Controllers.UpdateBlog)
-			blogs.DELETE("/:id", Controllers.DeleteBlog)
-			blogs.PATCH("/:id/publish", Controllers.PublishBlog)
+			blogs.GET("", controllers.GetBlogs)
+			blogs.POST("", controllers.CreateBlog)
+			blogs.GET("/:id", controllers.GetBlogByID)
+			blogs.PUT("/:id", controllers.UpdateBlog)
+			blogs.DELETE("/:id", controllers.DeleteBlog)
+			blogs.PATCH("/:id/publish", controllers.PublishBlog)
 		}
 	}
 
